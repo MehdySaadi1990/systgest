@@ -1,9 +1,13 @@
 import styled from "styled-components";
 import LogoPix from '../assets/logo512.png'
+import Facturation from "../../pages/Facturation/Facturation";
+import Stock from "../../pages/Stock/Stock";
+import AchatsDepenses from "../../pages/AchatsDepenses/AchatsDepenses";
+import Etats from "../../pages/Etats/Etats"
 import { Link } from "react-router-dom";
 
 const HeaderSpace = styled.div`
-width:300px;
+width:400px;
 height:700px;
 margin:0;
 background-color:black;
@@ -40,10 +44,10 @@ function Header() {
         <HeaderSpace>
             <Logo src={LogoPix} alt="Logo"/>
             <NavBar>
-                <NavLink to='/Facturation'>Facturation</NavLink>
-                <NavLink to='/Stock'>Gestion des Stocks</NavLink>
-                <NavLink to='/AchatsDepenses'>Achats / Dépenses</NavLink>
-                <NavLink to='/Etats'>Etats</NavLink>
+                <NavLink to='/' element={<Facturation/>}>Facturation</NavLink>
+                <NavLink to='/Stock' element={<Stock/>}>Gestion des Stocks</NavLink>
+                <NavLink to='/AchatsDepenses' element={<AchatsDepenses/>}>Achats / Dépenses</NavLink>
+                <NavLink to='/Etats' element={<Etats/>}>Etats</NavLink>
             </NavBar>
         </HeaderSpace>
     )

@@ -10,6 +10,7 @@ import Etats from './pages/Etats/Etats'
 const GlobalStyle = createGlobalStyle`
     div {
         font-family: 'Montserrat', sans-serif;
+        display:flex;
     }
 `
 function App() {
@@ -18,7 +19,7 @@ function App() {
     <GlobalStyle/>
     <Header/>
     <Routes>
-    <Route path='/Facturation' element={<Facturation/>}/>
+    <Route path='/' element={<Facturation/>}/>
     <Route path='/Stock' element={<Stock/>}/>
     <Route path='/AchatsDepenses' element={<AchatsDepenses/>}/>
     <Route path='/Etats' element={<Etats/>}/>
