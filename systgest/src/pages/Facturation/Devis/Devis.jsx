@@ -1,8 +1,8 @@
 import InvoiceForm from "../../../components/InvoiceForm/InvoiceForm"
 
-function Devis(params) {
+function Devis() {
     return(
-        <InvoiceForm type='Devis'/>
+        <InvoiceForm doc='Devis' type='Client'/>
     )
 }
 

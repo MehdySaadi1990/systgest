@@ -1,8 +1,8 @@
 import InvoiceForm from "../../../components/InvoiceForm/InvoiceForm"
 
-function RetourClient(params) {
+function RetourClient() {
     return(
-        <InvoiceForm type='Retour'/>
+        <InvoiceForm doc='Retour' type='Client'/>
     )
 }
 

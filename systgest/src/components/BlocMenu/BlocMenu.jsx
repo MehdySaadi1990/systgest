@@ -1,9 +1,9 @@
 import styled from "styled-components"
-import { Link } from "react-router-dom"
+import { useLocation } from "react-router-dom"
 import { useState } from "react"
 
 
-const Bloc = styled(Link)`
+const Bloc = styled.a`
 width:150px;
 height:120px;
 background-color:white;
@@ -36,11 +36,16 @@ text-align:center;
 `
 
 function BlocMenu({name, image, document}) {
+    const location = useLocation()
     const [docType, setDocType]=useState('/')
     return(
             <Bloc onClick={()=>{
-                setDocType(`/${document}`)
-                }} to={docType}>
+                if(location.pathname==='/'){
+                    setDocType(`/${document}`)
+                }else{
+                    setDocType(`${location.pathname}/${document}`)
+                }
+                }} href={docType}>
             <Logo src={image}/>
             <SectionName>{name}</SectionName>
             </Bloc>

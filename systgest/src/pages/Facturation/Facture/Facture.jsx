@@ -1,8 +1,8 @@
 import InvoiceForm from "../../../components/InvoiceForm/InvoiceForm"
 
-function Facture(params) {
+function Facture() {
     return(
-        <InvoiceForm type='Facture'/>
+        <InvoiceForm doc='Facture' type='Client'/>
     )
 }
 

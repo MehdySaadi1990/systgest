@@ -10,6 +10,7 @@ import Devis from './pages/Facturation/Devis/Devis'
 import Facture from './pages/Facturation/Facture/Facture'
 import BonDeCommande from './pages/Facturation/BonDeCommande/BonDeCommande'
 import RetourClient from './pages/Facturation/RetourClient/RetourClient'
+import EntreeStock from './pages/Stock/EntreeStock/EntreeStock'
 
 const GlobalStyle = createGlobalStyle`
     div {
@@ -29,7 +30,10 @@ function App() {
       <Route path='/BonDeCommande' element={<BonDeCommande/>}/>
       <Route path='/RetourClient' element={<RetourClient/>}/>
     <Route path='/Stock' element={<Stock/>}/>
-    <Route path='/AchatsDepenses' element={<AchatsDepenses/>}/>
+      <Route path='/Stock/EntreeStock' element={<EntreeStock/>}/>
+      <Route path='/Stock/SortieStock' element={<BonDeCommande/>}/>
+      <Route path='/Stock/TransfertDpt' element={<RetourClient/>}/>
+      <Route path='/Stock/CreationDpt' element={<AchatsDepenses/>}/>
     <Route path='/Etats' element={<Etats/>}/>
     </Routes>
     </Router>
